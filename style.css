@@ -1,0 +1,101 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+  background-color: black;
+  border: 10px solid green;
+}
+
+body {
+  margin: 20px;
+  text-align: center;
+  padding: 10px;
+  color: white;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.break {
+  border: 5px solid white;
+  position: relative;
+}
+
+header,
+main {
+  text-align: center;
+  padding: 20px;
+  color: white;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  box-sizing: border-box;
+}
+
+.btn {
+  background-color: white;
+  color: black;
+  font-size: larger;
+  width: 100px;
+  height: 50px;
+  border: 0px;
+  font-weight: 900;
+}
+
+.again {
+  float: left;
+}
+
+.rule {
+  float: right;
+  color: orangered;
+  font-size: larger;
+}
+
+h1 {
+  clear: both;
+  padding: 30px;
+  width: 400px;
+  margin: auto;
+  position: relative;
+}
+
+.guess {
+  border: black solid 5px;
+  font-size: 80px;
+  width: 110px;
+  height: 110px;
+  background-color: white;
+  color: black;
+  position: absolute;
+  left: 180px;
+  top: 85px;
+  z-index: 1;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.left {
+  display: inline-block;
+  width: 40%;
+  vertical-align: middle;
+  margin: 0, 200px;
+}
+
+.right {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 25px;
+  width: 500px;
+  margin: 0, 200px;
+  text-align: right;
+}
+
+.guessedNumber {
+  background-color: black;
+  border: 2px solid white;
+  color: white;
+  text-align: center;
+  width: 200px;
+  font-size: 80px;
+  margin-bottom: 40px;
+}
+
+.check {
+  display: block;
+  margin: auto;
+}
