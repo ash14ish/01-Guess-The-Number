@@ -23,12 +23,6 @@ header {
   margin: 0;
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .btn {
   background-color: white;
   color: black;
@@ -47,20 +41,21 @@ main {
 
 .title {
   width: 80%;
-  margin: 2rem auto;
+  margin: 0.6rem auto;
 }
 
 .guess-container {
   width: 90vw;
-  margin: auto;
+  margin: 0 auto;
   position: relative;
 }
 
 .guess {
-  font-size: 3rem;
+  font-size: 5rem;
+  font-weight: bold;
   width: 7rem;
   height: 7rem;
-  margin: auto;
+  margin: 2rem auto;
   background-color: white;
   color: black;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -72,6 +67,12 @@ main {
   position: absolute;
   top: calc(50% - 10px);
   z-index: -100;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .right {
@@ -113,7 +114,7 @@ main {
   }
 
   .guess {
-    font-size: 2.5rem;
+    font-size: 4.5rem;
     width: 6rem;
     height: 6rem;
   }
@@ -132,13 +133,14 @@ main {
   }
 
   .guess {
-    font-size: 2.2rem;
-    width: 5rem;
-    height: 5rem;
+    font-size: 3.6rem;
+    width: 4.6rem;
+    height: 4.6rem;
   }
 
   .title {
     font-size: 1.65rem;
+    margin-top: 0.8rem;
   }
 }
 
@@ -149,6 +151,12 @@ main {
 
   .title {
     font-size: 1.45rem;
+  }
+
+  .guess {
+    font-size: 3rem;
+    width: 4.2rem;
+    height: 4.2rem;
   }
 }
 
