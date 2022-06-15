@@ -4,14 +4,89 @@ let number = Math.trunc(Math.random() * 20) + 1;
 let chances = 12;
 let highscore = 0;
 
+// DOM Elements
+
+let checkButton = document.querySelector(".check");
+let numberInput = document.querySelector(`.guessed-number`);
+let rule = document.querySelector(".rule");
+let breakLine = document.querySelector(".break");
+let chancesLeft = document.querySelector(".chances");
+let guessedNumberBox = document.querySelector(".guess");
+let highscoreText = document.querySelector(".highscore");
+let playAgain = document.querySelector(".again");
+
+// DOM - styling and setting
+
 function domMessage(message) {
   document.querySelector(".message").textContent = message;
 }
 
-document.querySelector(".check").addEventListener("click", function () {
-  let guess = Number(document.querySelector(".guessedNumber").value);
+const init = () => {
+  number = Math.trunc(Math.random() * 20) + 1;
 
-  // If user doesn't input a number
+  document.documentElement.style.backgroundColor = "black";
+
+  rule.style.color = "orangered";
+
+  breakLine.style.borderColor = "white";
+
+  domMessage("🤷‍♀️ Make Your Guess... 🤷‍♂️ ");
+
+  chances = 12;
+  chancesLeft.textContent = "12";
+
+  guessedNumberBox.textContent = "?";
+  guessedNumberBox.style.backgroundColor = "white";
+
+  numberInput.style.visibility = "visible";
+  numberInput.disabled = false;
+  numberInput.value = "";
+  numberInput.style.backgroundColor = "black";
+  numberInput.style.borderWidth = "2px";
+
+  checkButton.style.visibility = "visible";
+  checkButton.disabled = false;
+  checkButton.disabled = false;
+  checkButton.textContent = "Check!";
+  checkButton.style.backgroundColor = "white";
+  checkButton.style.color = "black";
+};
+
+const winStyling = () => {
+  document.documentElement.style.backgroundColor = "green";
+
+  rule.style.color = "green";
+
+  breakLine.style.borderColor = "black";
+
+  guessedNumberBox.textContent = number;
+  guessedNumberBox.style.backgroundColor = "pink";
+  guessedNumberBox.fontSize = "100px";
+
+  domMessage("🏆🥇💸 Wohooooo!!! You won 💸🥇🏆");
+
+  if (chances * 100 > highscore) {
+    highscore = chances * 100;
+    highscoreText.textContent = highscore;
+  }
+
+  numberInput.style.visibility = "hidden";
+  numberInput.disabled = true;
+  numberInput.disabled = true;
+  numberInput.value = "";
+
+  checkButton.style.visibility = "hidden";
+  checkButton.disabled = true;
+};
+
+// Events
+
+// check button event
+
+checkButton.addEventListener("click", function () {
+  let guess = Number(numberInput.value);
+
+  // Invalid inputs by user
 
   if (!guess) {
     domMessage("🙏 Please Enter a Number 🙏");
@@ -21,74 +96,22 @@ document.querySelector(".check").addEventListener("click", function () {
 
   // When user wins
   else if (guess === number) {
-    domMessage("🏆🥇💸 Wohooooo!!! You won 💸🥇🏆");
-    document.querySelector(".guess").textContent = number;
-    if (chances * 100 > highscore) {
-      highscore = chances * 100;
-      document.querySelector(".highscore").textContent = highscore;
-    }
-    document.querySelector(".guessedNumber").disabled = true;
-    document.querySelector(".guessedNumber").value = "";
-
-    // styling
-
-    document.querySelector("html").style.backgroundColor = "green";
-    document.querySelector(".guess").style.backgroundColor = "pink";
-    document.querySelector(".guess").fontSize = "100px";
-    document.querySelector(".break").style.borderColor = "black";
-    document.querySelector(".guessedNumber").style.display = "none";
-    document.querySelector(".rule").style.color = "green";
-    document.querySelector(".check").style.display = "none";
-    document.querySelector(".check").disabled = true;
+    winStyling();
   }
 
-  // If user entered a lower guess
-  else if (guess < number) {
+  // If user entered a wrong guess
+  else {
     if (chances > 1) {
-      domMessage("🙋‍♂️ Guess a higher number 🙋‍♀️");
+      domMessage(`🙋‍♂️ Guess a ${guess > number ? "lower" : "higher"} number 🙋‍♀️`);
       chances--;
-      document.querySelector(".chances").textContent = chances;
+      chancesLeft.textContent = chances;
     } else {
       domMessage("😢 Oopsieeee!! You Lose 😢");
-      document.querySelector(".chances").textContent = "❌ No Lives Left ❌";
-    }
-  }
-
-  // If user entered a higher guess
-  else if (guess > number) {
-    if (chances > 1) {
-      domMessage("🙋‍♂️ Guess a lower number 🙋‍♀️");
-      chances--;
-      document.querySelector(".chances").textContent = chances;
-    } else {
-      domMessage("😢 Oopsieeee!! You Lose 😢");
-      document.querySelector(".chances").textContent = "❌ No Lives Left ❌";
+      chancesLeft.textContent = "❌ No Lives Left ❌";
     }
   }
 });
 
-document.querySelector(".again").addEventListener("click", function () {
-  chances = 12;
-  number = Math.trunc(Math.random() * 20) + 1;
-  document.querySelector(".guess").textContent = "?";
-  domMessage("🤷‍♀️ Make Your Guess... 🤷‍♂️ ");
-  document.querySelector(".chances").textContent = "12";
-  document.querySelector(".guessedNumber").value = "";
-  document.querySelector(".guessedNumber").disabled = false;
-  document.querySelector(".check").disabled = false;
-  document.querySelector(".check").textContent = "Check!";
+// again button event
 
-  // styling back
-
-  document.querySelector("html").style.backgroundColor = "black";
-  document.querySelector(".guess").style.backgroundColor = "white";
-  document.querySelector(".guess").style.border = "0";
-  document.querySelector(".break").style.borderColor = "white";
-  // document.querySelector(".guessedNumber").style.display = "auto";
-  document.querySelector(".guessedNumber").style.backgroundColor = "black";
-  document.querySelector(".guessedNumber").style.borderWidth = "2px";
-  document.querySelector(".rule").style.color = "orangered";
-  // document.querySelector(".check").style.display = "auto";
-  document.querySelector(".check").style.backgroundColor = "white";
-  document.querySelector(".check").style.color = "black";
-});
+playAgain.addEventListener("click", init);
