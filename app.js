@@ -24,7 +24,7 @@ function domMessage(message) {
 const init = () => {
   number = Math.trunc(Math.random() * 20) + 1;
 
-  document.documentElement.style.backgroundColor = "black";
+  document.body.style.backgroundColor = "rgb(72, 15, 26)";
 
   rule.style.color = "orangered";
 
@@ -53,7 +53,7 @@ const init = () => {
 };
 
 const winStyling = () => {
-  document.documentElement.style.backgroundColor = "green";
+  document.body.style.backgroundColor = "green";
 
   rule.style.color = "green";
 

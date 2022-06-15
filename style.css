@@ -1,7 +1,7 @@
 body {
   text-align: center;
   margin: 0;
-  padding: 1rem;
+  padding: 0.4rem 1rem;
   color: white;
   font-family: Georgia, "Times New Roman", Times, serif;
   background-color: rgb(72, 15, 26);
@@ -15,34 +15,39 @@ body {
 header,
 main {
   text-align: center;
-  padding: 20px;
   color: white;
   font-family: Georgia, "Times New Roman", Times, serif;
   box-sizing: border-box;
 }
 
+header {
+  padding: 0 0.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+
 main {
   display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .btn {
   background-color: white;
   color: black;
   font-size: larger;
-  width: 100px;
-  height: 50px;
+  width: 6rem;
+  height: 3rem;
   border: 0px;
   font-weight: 900;
-}
-
-.again {
-  float: left;
+  border-radius: 4px;
 }
 
 .rule {
-  float: right;
-  color: orangered;
-  font-size: larger;
+  color: rgb(234, 231, 62);
+  font-size: 1.3rem;
 }
 
 h1 {
@@ -66,20 +71,8 @@ h1 {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-.left {
-  display: inline-block;
-  width: 40%;
-  vertical-align: middle;
-  margin: 0, 200px;
-}
-
 .right {
-  display: inline-block;
-  vertical-align: middle;
-  font-size: 25px;
-  width: 500px;
-  margin: 0, 200px;
-  text-align: right;
+  font-size: 1.2rem;
 }
 
 .guessed-number {
@@ -87,12 +80,46 @@ h1 {
   border: 2px solid white;
   color: white;
   text-align: center;
-  width: 200px;
-  font-size: 80px;
-  margin-bottom: 40px;
+  width: 150px;
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
 .check {
   display: block;
   margin: auto;
+}
+
+#game-params {
+  background-color: white;
+  color: black;
+  width: 15%;
+}
+
+@media (max-width: 600px) {
+  .rule {
+    color: rgb(255, 251, 0);
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: medium;
+    width: 4.5rem;
+    height: 2.2rem;
+    border: 0px;
+    font-weight: 900;
+    border-radius: 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+
+  .rule {
+    margin-bottom: 0.3rem;
+    align-self: center;
+  }
 }
