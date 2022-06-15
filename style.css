@@ -101,9 +101,6 @@ h1 {
     font-size: medium;
     width: 4.5rem;
     height: 2.2rem;
-    border: 0px;
-    font-weight: 900;
-    border-radius: 4px;
   }
 }
 
@@ -121,5 +118,23 @@ h1 {
 
   h1 {
     font-size: 1.65rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .rule {
+    margin-bottom: 0.3rem;
+    align-self: flex-start;
+    font-size: 0.8rem;
+  }
+
+  h1 {
+    font-size: 1.25rem;
+  }
+
+  .btn {
+    font-size: small;
+    width: 4rem;
+    height: 1.6rem;
   }
 }
