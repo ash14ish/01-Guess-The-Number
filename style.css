@@ -171,11 +171,15 @@ header {
   }
 
   .game-params p {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
+  }
+
+  .game-params div {
+    margin-top: 1rem;
   }
 
   .game-params p:first-child {
-    margin-bottom: 1.6rem;
+    margin-bottom: 2.2rem;
   }
 }
 

@@ -94,6 +94,19 @@ const winStyling = () => {
   checkButton.disabled = true;
 };
 
+const loseStyling = () => {
+  domMessage("😢 Oops!! You Lose 😢");
+  toggleChanceClass.classList.add("hidden");
+  toggleNoChanceClass.classList.remove("hidden");
+
+  numberInput.disabled = true;
+  numberInput.disabled = true;
+  numberInput.value = "";
+
+  checkButton.style.display = "none";
+  checkButton.disabled = true;
+};
+
 // Events
 
 // check button event
@@ -124,9 +137,7 @@ checkButton.addEventListener("click", function () {
       chances--;
       chancesLeft.textContent = chances;
     } else {
-      domMessage("😢 Oops!! You Lose 😢");
-      toggleChanceClass.classList.add("hidden");
-      toggleNoChanceClass.classList.remove("hidden");
+      loseStyling();
     }
 
     if (chances < 4) {
