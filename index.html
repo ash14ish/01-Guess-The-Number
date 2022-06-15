@@ -9,7 +9,7 @@
   </head>
   <body>
     <header>
-      <button class="btn again">Again!</button>
+      <button class="btn again">Again</button>
 
       <p class="rule">(Enter any number between 1-20)</p>
     </header>
@@ -21,18 +21,16 @@
       <hr class="break" />
     </div>
 
-    <div id="game-params">
-      <p>🧬 Number of Lives : <span class="chances">12</span></p>
-      <p>🥇 Highscore : <span class="highscore">0</span></p>
-    </div>
+    <section class="game-input">
+      <input type="number" class="guessed-number" />
+      <button class="btn check">Guess</button>
+    </section>
 
     <main>
-      <section class="left">
-        <input type="number" class="guessed-number" />
-        <button class="btn check">Check!</button>
-      </section>
-      <section class="right">
+      <section class="content">
         <p class="message">🤷‍♀️ Make Your Guess... 🤷‍♂️</p>
+        <p>🧬 Number of Lives : <span class="chances">12</span></p>
+        <p>🥇 Highscore : <span class="highscore">0</span></p>
       </section>
     </main>
 

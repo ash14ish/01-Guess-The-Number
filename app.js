@@ -29,6 +29,7 @@ const init = () => {
   rule.style.color = "orangered";
 
   breakLine.style.borderColor = "white";
+  breakLine.style.backgroundColor = "white";
 
   domMessage("🤷‍♀️ Make Your Guess... 🤷‍♂️ ");
 
@@ -47,7 +48,7 @@ const init = () => {
   checkButton.style.visibility = "visible";
   checkButton.disabled = false;
   checkButton.disabled = false;
-  checkButton.textContent = "Check!";
+  checkButton.textContent = "Guess";
   checkButton.style.backgroundColor = "white";
   checkButton.style.color = "black";
 };
@@ -103,11 +104,13 @@ checkButton.addEventListener("click", function () {
   // If user entered a wrong guess
   else {
     if (chances > 1) {
-      domMessage(`🙋‍♂️ Guess a ${guess > number ? "lower" : "higher"} number 🙋‍♀️`);
+      domMessage(
+        `Guess a ${guess > number ? "lower  number 👇" : "higher  number 👆"}`
+      );
       chances--;
       chancesLeft.textContent = chances;
     } else {
-      domMessage("😢 Oopsieeee!! You Lose 😢");
+      domMessage("😢 Oops!! You Lose 😢");
       chancesLeft.textContent = "❌ No Lives Left ❌";
     }
   }
