@@ -58,6 +58,7 @@ const winStyling = () => {
   rule.style.color = "green";
 
   breakLine.style.borderColor = "black";
+  breakLine.style.backgroundColor = "black";
 
   guessedNumberBox.textContent = number;
   guessedNumberBox.style.backgroundColor = "pink";
