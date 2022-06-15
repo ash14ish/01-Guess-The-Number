@@ -10,7 +10,11 @@ let checkButton = document.querySelector(".check");
 let numberInput = document.querySelector(`.guessed-number`);
 let rule = document.querySelector(".rule");
 let breakLine = document.querySelector(".break");
+
 let chancesLeft = document.querySelector(".chances");
+let toggleChanceClass = document.querySelector(".chances-left");
+let toggleNoChanceClass = document.querySelector(".no-chances-left");
+
 let guessedNumberBox = document.querySelector(".guess");
 let highscoreText = document.querySelector(".highscore");
 let playAgain = document.querySelector(".again");
@@ -26,26 +30,31 @@ const init = () => {
 
   document.body.style.backgroundColor = "rgb(72, 15, 26)";
 
-  rule.style.color = "orangered";
+  rule.style.color = "rgb(234, 231, 62)";
 
   breakLine.style.borderColor = "white";
   breakLine.style.backgroundColor = "white";
 
-  domMessage("🤷‍♀️ Make Your Guess... 🤷‍♂️ ");
+  domMessage("Make Your Guess... 🤷‍♂️ ");
+
+  highscoreText.style.color = "rgb(15, 215, 15)";
 
   chances = 12;
   chancesLeft.textContent = "12";
+  chancesLeft.style.color = "rgb(15, 215, 15)";
+  toggleChanceClass.classList.remove("hidden");
+  toggleNoChanceClass.classList.add("hidden");
 
   guessedNumberBox.textContent = "?";
   guessedNumberBox.style.backgroundColor = "white";
 
-  numberInput.style.visibility = "visible";
+  numberInput.style.display = "block";
   numberInput.disabled = false;
   numberInput.value = "";
-  numberInput.style.backgroundColor = "black";
-  numberInput.style.borderWidth = "2px";
+  numberInput.style.backgroundColor = "rgb(181, 248, 236)";
+  numberInput.style.borderWidth = "4px";
 
-  checkButton.style.visibility = "visible";
+  checkButton.style.display = "block";
   checkButton.disabled = false;
   checkButton.disabled = false;
   checkButton.textContent = "Guess";
@@ -71,13 +80,17 @@ const winStyling = () => {
     highscore = chances * 100;
     highscoreText.textContent = highscore;
   }
+  highscoreText.style.color = "rgb(228 220 36)";
 
-  numberInput.style.visibility = "hidden";
+  chancesLeft.style.color = "rgb(228 220 36)";
+  toggleChanceClass.classList.add("hidden");
+
+  numberInput.style.display = "none";
   numberInput.disabled = true;
   numberInput.disabled = true;
   numberInput.value = "";
 
-  checkButton.style.visibility = "hidden";
+  checkButton.style.display = "none";
   checkButton.disabled = true;
 };
 
@@ -91,9 +104,9 @@ checkButton.addEventListener("click", function () {
   // Invalid inputs by user
 
   if (!guess) {
-    domMessage("🙏 Please Enter a Number 🙏");
+    domMessage("❌ Not a number ❌");
   } else if (guess < 0 || guess > 20) {
-    domMessage("❌ Not a valid number ❌");
+    domMessage("Range is 1-20 🔢");
   }
 
   // When user wins
@@ -107,11 +120,17 @@ checkButton.addEventListener("click", function () {
       domMessage(
         `Guess a ${guess > number ? "lower  number 👇" : "higher  number 👆"}`
       );
+
       chances--;
       chancesLeft.textContent = chances;
     } else {
       domMessage("😢 Oops!! You Lose 😢");
-      chancesLeft.textContent = "❌ No Lives Left ❌";
+      toggleChanceClass.classList.add("hidden");
+      toggleNoChanceClass.classList.remove("hidden");
+    }
+
+    if (chances < 4) {
+      chancesLeft.style.color = "red";
     }
   }
 });

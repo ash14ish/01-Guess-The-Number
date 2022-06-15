@@ -76,32 +76,44 @@ header {
 }
 
 .guessed-number {
+  display: block;
   background-color: rgb(181, 248, 236);
   border: 4px solid rgb(0, 23, 13);
   color: black;
   text-align: center;
   width: 40vw;
+  margin: 1rem auto;
   padding: 1rem 0;
+  font-weight: bold;
   font-size: 3rem;
-  margin-bottom: 1rem;
 }
 
-.game-params p {
+.game-params div {
   font-size: 1.5rem;
   margin: 0.4rem auto;
 }
 
-.game-params p:first-child {
+.game-params div {
   margin-top: 1rem;
 }
 
-.game-params p:last-child {
-  margin-bottom: 2.2rem;
+.game-params div:last-child {
+  margin-bottom: 1.62rem;
 }
 
 .check {
   display: block;
   margin: auto;
+}
+
+.chances,
+.highscore {
+  color: rgb(15, 215, 15);
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
 }
 
 @media (max-width: 600px) {
@@ -160,6 +172,10 @@ header {
 
   .game-params p {
     font-size: 1.1rem;
+  }
+
+  .game-params p:first-child {
+    margin-bottom: 1.6rem;
   }
 }
 
