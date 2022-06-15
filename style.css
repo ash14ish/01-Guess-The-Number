@@ -67,6 +67,8 @@ header {
 .message {
   width: 90vw;
   margin: auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   background-color: rgb(181, 248, 236);
   color: black;
   border-radius: 0.6rem;
@@ -94,7 +96,7 @@ header {
 }
 
 .game-params p:last-child {
-  margin-bottom: 1.6rem;
+  margin-bottom: 2.2rem;
 }
 
 .check {
