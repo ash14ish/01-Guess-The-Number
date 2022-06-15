@@ -116,10 +116,11 @@ h1 {
   header {
     flex-direction: column-reverse;
     align-items: flex-start;
+    justify-content: center;
   }
 
   .rule {
-    margin-bottom: 0.3rem;
-    align-self: center;
+    margin-bottom: 0.4rem;
+    align-self: flex-end;
   }
 }
