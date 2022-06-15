@@ -50,6 +50,12 @@ main {
   margin: 2rem auto;
 }
 
+.guess-container {
+  width: 90vw;
+  margin: auto;
+  position: relative;
+}
+
 .guess {
   font-size: 3rem;
   width: 7rem;
@@ -57,16 +63,16 @@ main {
   margin: auto;
   background-color: white;
   color: black;
-  z-index: 1;
-  position: relative;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-/* .break {
-  width: 90vw;
-
+.break {
+  width: 100%;
   border: 5px solid white;
-} */
+  position: absolute;
+  top: calc(50% - 10px);
+  z-index: -100;
+}
 
 .right {
   font-size: 1.2rem;
@@ -78,7 +84,8 @@ main {
   color: white;
   text-align: center;
   width: 150px;
-  font-size: 3rem;
+  padding: 1rem 0;
+  font-size: 2rem;
   margin-bottom: 1rem;
 }
 
