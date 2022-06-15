@@ -64,6 +64,7 @@ header {
 .break {
   width: 100%;
   border: 5px solid white;
+  background-color: white;
   position: absolute;
   top: calc(50% - 10px);
   z-index: -100;
@@ -118,6 +119,10 @@ main {
     width: 6rem;
     height: 6rem;
   }
+
+  .break {
+    width: 97%;
+  }
 }
 
 @media (max-width: 480px) {
@@ -140,7 +145,7 @@ main {
 
   .title {
     font-size: 1.65rem;
-    margin-top: 0.8rem;
+    margin-top: 2rem;
   }
 }
 
