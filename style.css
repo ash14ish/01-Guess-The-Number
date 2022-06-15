@@ -121,7 +121,7 @@ h1 {
   }
 }
 
-@media (max-width: 392px) {
+@media (max-width: 394px) {
   .rule {
     margin-bottom: 0.3rem;
     align-self: flex-start;
