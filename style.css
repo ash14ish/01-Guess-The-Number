@@ -104,7 +104,8 @@ header {
 }
 
 .chances,
-.highscore {
+.highscore,
+.current-score {
   color: rgb(15, 215, 15);
   font-weight: bold;
 }
@@ -119,15 +120,15 @@ header {
 
 @keyframes revolver {
   0% {
-    transform: translateY(-85%);
+    transform: translateY(-65%);
   }
 
   50% {
-    transform: translateY(70%);
+    transform: translateY(55%);
   }
 
   100% {
-    transform: translateY(-85%);
+    transform: translateY(-75%);
   }
 }
 

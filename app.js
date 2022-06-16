@@ -5,20 +5,25 @@ let chances = 8;
 let highscore = 0;
 
 // DOM Elements
+let playAgain = document.querySelector(".again");
 
-let checkButton = document.querySelector(".check");
-let numberInput = document.querySelector(`.guessed-number`);
 let rule = document.querySelector(".rule");
+let guessedNumberBox = document.querySelector(".guess");
 let breakLine = document.querySelector(".break");
 
-let chancesLeft = document.querySelector(".chances");
 let toggleChanceClass = document.querySelector(".chances-left");
 let toggleNoChanceClass = document.querySelector(".no-chances-left");
 
-let guessedNumberBox = document.querySelector(".guess");
+let numberInput = document.querySelector(`.guessed-number`);
+let checkButton = document.querySelector(".check");
+
+let chancesLeft = document.querySelector(".chances");
+
+let currentscoreContainer = document.querySelector(".current-score-div");
+let currentscoreText = document.querySelector(".current-score");
+
 let highscoreContainer = document.querySelector(".highscore-div");
 let highscoreText = document.querySelector(".highscore");
-let playAgain = document.querySelector(".again");
 
 // DOM - styling and setting
 
@@ -38,8 +43,11 @@ const init = () => {
 
   domMessage("Make Your Guess... 🤷‍♂️ ");
 
+  currentscoreText.textContent = "0";
+  currentscoreContainer.classList.add("hidden");
+  currentscoreContainer.classList.remove("animate");
+
   highscoreText.style.color = "rgb(15, 215, 15)";
-  highscoreContainer.style.marginTop = "1rem";
   highscoreContainer.classList.remove("animate");
 
   chances = 8;
@@ -79,13 +87,18 @@ const winStyling = () => {
 
   domMessage("🏆🥇💸 Wohooooo!!! You won 💸🥇🏆");
 
+  currentscoreText.textContent = chances * 200;
+  currentscoreText.style.color = "rgb(228 220 36)";
+  currentscoreContainer.classList.remove("hidden");
+  currentscoreContainer.classList.add("animate");
+  currentscoreContainer.style.marginTop = "3rem";
+
   if (chances * 200 > highscore) {
     highscore = chances * 200;
     highscoreText.textContent = highscore;
   }
 
   highscoreText.style.color = "rgb(228 220 36)";
-  highscoreContainer.style.marginTop = "3rem";
   highscoreContainer.classList.add("animate");
 
   chancesLeft.style.color = "rgb(228 220 36)";
