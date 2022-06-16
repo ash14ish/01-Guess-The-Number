@@ -117,7 +117,7 @@ header {
 }
 
 .animate {
-  animation: revolver 2s 1 forwards reverse ease-in;
+  animation: revolver 1s 1 forwards reverse ease-in;
 }
 
 @keyframes revolver {
