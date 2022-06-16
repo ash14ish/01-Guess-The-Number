@@ -67,7 +67,7 @@ const init = () => {
 };
 
 const winStyling = () => {
-  document.body.style.background = `url("./assets/win.png")  35% 10%/cover`;
+  document.body.style.background = `url("./assets/win.png")  45% 10%/cover`;
 
   rule.style.visibility = "hidden";
 
