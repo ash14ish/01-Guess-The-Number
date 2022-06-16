@@ -16,6 +16,7 @@ let toggleChanceClass = document.querySelector(".chances-left");
 let toggleNoChanceClass = document.querySelector(".no-chances-left");
 
 let guessedNumberBox = document.querySelector(".guess");
+let highscoreContainer = document.querySelector(".highscore-div");
 let highscoreText = document.querySelector(".highscore");
 let playAgain = document.querySelector(".again");
 
@@ -38,6 +39,7 @@ const init = () => {
   domMessage("Make Your Guess... 🤷‍♂️ ");
 
   highscoreText.style.color = "rgb(15, 215, 15)";
+  highscoreContainer.style.marginTop = "1rem";
 
   chances = 8;
   chancesLeft.textContent = "8";
@@ -80,7 +82,9 @@ const winStyling = () => {
     highscore = chances * 200;
     highscoreText.textContent = highscore;
   }
+
   highscoreText.style.color = "rgb(228 220 36)";
+  highscoreContainer.style.marginTop = "2rem";
 
   chancesLeft.style.color = "rgb(228 220 36)";
   toggleChanceClass.classList.add("hidden");
