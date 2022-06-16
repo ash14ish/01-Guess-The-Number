@@ -115,20 +115,20 @@ header {
 }
 
 .animate {
-  animation: revolver 1200ms 3 forwards reverse ease-in;
+  animation: revolver 2s 1 forwards reverse ease-in;
 }
 
 @keyframes revolver {
   0% {
-    transform: translateY(-65%);
+    transform: rotateY(0);
   }
 
   50% {
-    transform: translateY(55%);
+    transform: rotateY(180deg);
   }
 
   100% {
-    transform: translateY(-75%);
+    transform: rotateY(360deg);
   }
 }
 
