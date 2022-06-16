@@ -32,11 +32,10 @@ function domMessage(message) {
 }
 
 const init = () => {
+  document.body.style.background = `url("./assets/init.jpg") 0 0 / cover`;
   number = Math.trunc(Math.random() * 20) + 1;
 
-  document.body.style.backgroundColor = "rgb(72, 15, 26)";
-
-  rule.style.color = "rgb(234, 231, 62)";
+  rule.style.visibility = "visible";
 
   breakLine.style.borderColor = "white";
   breakLine.style.backgroundColor = "white";
@@ -52,7 +51,6 @@ const init = () => {
 
   chances = 8;
   chancesLeft.textContent = "8";
-  chancesLeft.style.color = "rgb(15, 215, 15)";
   toggleChanceClass.classList.remove("hidden");
   toggleNoChanceClass.classList.add("hidden");
 
@@ -62,21 +60,16 @@ const init = () => {
   numberInput.style.display = "block";
   numberInput.disabled = false;
   numberInput.value = "";
-  numberInput.style.backgroundColor = "rgb(181, 248, 236)";
-  numberInput.style.borderWidth = "4px";
 
   checkButton.style.display = "block";
   checkButton.disabled = false;
   checkButton.disabled = false;
-  checkButton.textContent = "Guess";
-  checkButton.style.backgroundColor = "white";
-  checkButton.style.color = "black";
 };
 
 const winStyling = () => {
-  document.body.style.backgroundColor = "green";
+  document.body.style.background = `url("./assets/win.png")  30% 10%/cover`;
 
-  rule.style.color = "green";
+  rule.style.visibility = "hidden";
 
   breakLine.style.borderColor = "black";
   breakLine.style.backgroundColor = "black";
@@ -88,7 +81,7 @@ const winStyling = () => {
   domMessage("🏆🥇💸 Wohooooo!!! You won 💸🥇🏆");
 
   currentscoreText.textContent = chances * 200;
-  currentscoreText.style.color = "rgb(228 220 36)";
+  currentscoreText.style.color = "rgb(255 254 0)";
   currentscoreContainer.classList.remove("hidden");
   currentscoreContainer.classList.add("animate");
   currentscoreContainer.style.marginTop = "3rem";
@@ -98,10 +91,9 @@ const winStyling = () => {
     highscoreText.textContent = highscore;
   }
 
-  highscoreText.style.color = "rgb(228 220 36)";
+  highscoreText.style.color = "rgb(255 254 0)";
   highscoreContainer.classList.add("animate");
 
-  chancesLeft.style.color = "rgb(228 220 36)";
   toggleChanceClass.classList.add("hidden");
 
   numberInput.style.display = "none";
