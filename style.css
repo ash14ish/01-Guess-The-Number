@@ -167,6 +167,10 @@ header {
     font-size: 1.6rem;
   }
 
+  .check {
+    margin-bottom: 1.3rem;
+  }
+
   .game-params div {
     font-size: 1.2rem;
   }
