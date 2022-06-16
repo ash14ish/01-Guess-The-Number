@@ -171,10 +171,6 @@ header {
     font-size: 1.2rem;
   }
 
-  .game-params div {
-    margin-top: 1.2rem;
-  }
-
   .game-params div:last-child {
     margin-bottom: 4rem;
   }

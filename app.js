@@ -84,7 +84,7 @@ const winStyling = () => {
   }
 
   highscoreText.style.color = "rgb(228 220 36)";
-  highscoreContainer.style.marginTop = "2rem";
+  highscoreContainer.style.marginTop = "3rem";
 
   chancesLeft.style.color = "rgb(228 220 36)";
   toggleChanceClass.classList.add("hidden");
