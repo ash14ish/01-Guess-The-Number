@@ -40,6 +40,7 @@ const init = () => {
 
   highscoreText.style.color = "rgb(15, 215, 15)";
   highscoreContainer.style.marginTop = "1rem";
+  highscoreContainer.classList.remove("animate");
 
   chances = 8;
   chancesLeft.textContent = "8";
@@ -85,6 +86,7 @@ const winStyling = () => {
 
   highscoreText.style.color = "rgb(228 220 36)";
   highscoreContainer.style.marginTop = "3rem";
+  highscoreContainer.classList.add("animate");
 
   chancesLeft.style.color = "rgb(228 220 36)";
   toggleChanceClass.classList.add("hidden");
@@ -153,3 +155,5 @@ checkButton.addEventListener("click", function () {
 // again button event
 
 playAgain.addEventListener("click", init);
+
+// highscoreContainer.classList.add("animate");

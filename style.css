@@ -109,6 +109,28 @@ header {
   font-weight: bold;
 }
 
+.chances {
+  transition: all 600ms ease-in;
+}
+
+.animate {
+  animation: revolver 1200ms 3 forwards reverse ease-in;
+}
+
+@keyframes revolver {
+  0% {
+    transform: translateY(-85%);
+  }
+
+  50% {
+    transform: translateY(70%);
+  }
+
+  100% {
+    transform: translateY(-85%);
+  }
+}
+
 .hidden {
   display: none;
 }
