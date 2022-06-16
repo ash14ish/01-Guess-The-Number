@@ -25,15 +25,19 @@ let currentscoreText = document.querySelector(".current-score");
 let highscoreContainer = document.querySelector(".highscore-div");
 let highscoreText = document.querySelector(".highscore");
 
+let message = document.querySelector(".message");
+
 // DOM - styling and setting
 
-function domMessage(message) {
-  document.querySelector(".message").textContent = message;
+function domMessage(msg) {
+  message.textContent = msg;
 }
 
 const init = () => {
   document.body.style.background = `url("./assets/init.jpg") 0 0 / cover`;
   number = Math.trunc(Math.random() * 20) + 1;
+
+  playAgain.style.backgroundColor = "#e64b3c";
 
   rule.style.visibility = "visible";
 
@@ -64,10 +68,14 @@ const init = () => {
   checkButton.style.display = "block";
   checkButton.disabled = false;
   checkButton.disabled = false;
+
+  message.style.backgroundColor = "rgb(33, 204, 196)";
 };
 
 const winStyling = () => {
   document.body.style.background = `url("./assets/win.png")  45% 10%/cover`;
+
+  playAgain.style.backgroundColor = "#d9df2d";
 
   rule.style.visibility = "hidden";
 
@@ -75,7 +83,7 @@ const winStyling = () => {
   breakLine.style.backgroundColor = "black";
 
   guessedNumberBox.textContent = number;
-  guessedNumberBox.style.backgroundColor = "pink";
+  guessedNumberBox.style.backgroundColor = "#d9df2d";
   guessedNumberBox.fontSize = "100px";
 
   domMessage("🏆🥇💸 Wohooooo!!! You won 💸🥇🏆");
@@ -103,6 +111,8 @@ const winStyling = () => {
 
   checkButton.style.display = "none";
   checkButton.disabled = true;
+
+  message.style.backgroundColor = "rgb(46 159 31)";
 };
 
 const loseStyling = () => {
@@ -160,5 +170,3 @@ checkButton.addEventListener("click", function () {
 // again button event
 
 playAgain.addEventListener("click", init);
-
-// highscoreContainer.classList.add("animate");
