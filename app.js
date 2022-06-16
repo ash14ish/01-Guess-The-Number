@@ -1,7 +1,7 @@
 // 'use strict';
 
 let number = Math.trunc(Math.random() * 20) + 1;
-let chances = 12;
+let chances = 8;
 let highscore = 0;
 
 // DOM Elements
@@ -39,8 +39,8 @@ const init = () => {
 
   highscoreText.style.color = "rgb(15, 215, 15)";
 
-  chances = 12;
-  chancesLeft.textContent = "12";
+  chances = 8;
+  chancesLeft.textContent = "8";
   chancesLeft.style.color = "rgb(15, 215, 15)";
   toggleChanceClass.classList.remove("hidden");
   toggleNoChanceClass.classList.add("hidden");
@@ -76,8 +76,8 @@ const winStyling = () => {
 
   domMessage("🏆🥇💸 Wohooooo!!! You won 💸🥇🏆");
 
-  if (chances * 100 > highscore) {
-    highscore = chances * 100;
+  if (chances * 200 > highscore) {
+    highscore = chances * 200;
     highscoreText.textContent = highscore;
   }
   highscoreText.style.color = "rgb(228 220 36)";
