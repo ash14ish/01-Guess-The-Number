@@ -232,6 +232,11 @@ header {
   .game-params div:last-child {
     margin-bottom: 1rem;
   }
+
+  .current-score {
+    font-size: 1.1rem;
+    margin-top: 0.8rem;
+  }
 }
 
 @media (max-width: 350px) {
