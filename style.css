@@ -5,7 +5,7 @@ body {
   color: white;
   font-family: Georgia, "Times New Roman", Times, serif;
   background: url("./assets/init.jpg") 0 0 / cover;
-  transition: all 1s ease-in;
+  transition: background-image 1s ease-in;
 }
 
 header {
