@@ -92,7 +92,6 @@ const winStyling = () => {
   currentscoreText.style.color = "rgb(255 254 0)";
   currentscoreContainer.classList.remove("hidden");
   currentscoreContainer.classList.add("animate");
-  currentscoreContainer.style.marginTop = "3rem";
 
   if (chances * 200 > highscore) {
     highscore = chances * 200;
