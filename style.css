@@ -496,10 +496,6 @@ header {
   .game-params div {
     font-size: 0.95rem;
   }
-
-  .check {
-    margin-bottom: 1.1rem;
-  }
 }
 
 @media (max-width: 350px) {
