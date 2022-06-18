@@ -224,13 +224,14 @@ header {
     font-size: 1.1rem;
   }
 
-  /* .game-params div {
-    font-size: 1.2rem;
+  .game-params div {
+    font-size: 1.1rem;
+    margin-top: 0.8rem;
   }
 
   .game-params div:last-child {
-    margin-bottom: 4rem;
-  } */
+    margin-bottom: 1rem;
+  }
 }
 
 @media (max-width: 350px) {
