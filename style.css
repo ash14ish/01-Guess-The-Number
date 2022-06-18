@@ -225,9 +225,7 @@ header {
   }
 
   .game-params div {
-    font-size: 1rem;
-    margin: 0.2rem auto;
-    margin-top: 0.6rem;
+    font-size: 0.95rem;
   }
 }
 
