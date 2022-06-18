@@ -224,13 +224,13 @@ header {
     font-size: 1.2rem;
   }
 
-  /* .game-params div {
-    font-size: 0.93rem;
+  .game-params div {
+    font-size: 1rem;
   }
 
   .game-params div:last-child {
     margin-bottom: 2.9rem;
-  } */
+  }
 
   .check {
     margin-bottom: 1.2rem;
