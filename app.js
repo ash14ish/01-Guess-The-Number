@@ -78,7 +78,7 @@ const winStyling = () => {
 
   setTimeout(() => {
     document.body.style.background = `url("./assets/win.jpg")  45% 10%/cover`;
-  }, 2000);
+  }, 3000);
 
   playAgain.style.backgroundColor = "#d9df2d";
 
