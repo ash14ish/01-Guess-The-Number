@@ -57,6 +57,7 @@ const init = () => {
   chancesLeft.textContent = "8";
   toggleChanceClass.classList.remove("hidden");
   toggleNoChanceClass.classList.add("hidden");
+  chancesLeft.style.color = "rgb(15, 215, 15)";
 
   guessedNumberBox.textContent = "?";
   guessedNumberBox.style.backgroundColor = "white";
