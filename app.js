@@ -77,8 +77,8 @@ const winStyling = () => {
   document.body.style.background = `linear-gradient(to bottom, #000000 25%, #27470c 40%, #000000 75%)`;
 
   setTimeout(() => {
-    document.body.style.background = `url("./assets/win.jpg")  45% 10%/cover`;
-  }, 3000);
+    document.body.style.background = `url("./assets/win.jpg")`;
+  }, 2000);
 
   playAgain.style.backgroundColor = "#d9df2d";
 
