@@ -73,7 +73,7 @@ const init = () => {
 };
 
 const winStyling = () => {
-  document.body.style.background = `url("./assets/win.png")  45% 10%/cover`;
+  document.body.style.background = `url("./assets/win.jpg")  45% 10%/cover`;
 
   playAgain.style.backgroundColor = "#d9df2d";
 
