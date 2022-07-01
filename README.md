@@ -1,7 +1,14 @@
 # Guess The Number
 
-An addictive game in which a player has to guess the correct number (between one to twenty- both inclusive). A message will be displayed for the wrong guess.
+_An addictive game in which a player has to guess the correct number (between one to twenty- both inclusive). A message will be displayed for the wrong guess._
 
 ## Tech
 
-- [Javascript](http://stackoverflow.com){:target:"\_blank"}
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
+## Implementation
+
+- DOM manipulation using DOM style
+- Math.random() - to generate the secret number
