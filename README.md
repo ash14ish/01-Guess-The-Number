@@ -4,5 +4,4 @@ An addictive game in which a player has to guess the correct number (between one
 
 ## Tech
 
-- [Javascript](http://stackoverflow.com)
-- <a href="http://example.com/" target="_blank">example</a>
+- [Javascript](http://stackoverflow.com){:target:"\_blank"}
